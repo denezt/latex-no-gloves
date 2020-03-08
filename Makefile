@@ -20,7 +20,6 @@ archive:
 
 finalize:
 	@find . -type f -name "$(PRGNAME).aux" -delete
-	@find . -type f -name "$(PRGNAME).pdf" -delete
 	@find . -type f -name "$(PRGNAME).log" -delete
 	@printf "Finalizing, build...\n"
 
