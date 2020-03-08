@@ -1,4 +1,5 @@
 PRGNAME=example
+BUILDS=output_file
 
 all: clean generate archive finalize
 	@printf "Done, building document\n"
@@ -22,3 +23,7 @@ finalize:
 	@find . -type f -name "$(PRGNAME).pdf" -delete
 	@find . -type f -name "$(PRGNAME).log" -delete
 	@printf "Finalizing, build...\n"
+
+purge:
+	@printf "Purging, previous builds...\n"
+	@find . -type d -name $(BUILDS) -delete
